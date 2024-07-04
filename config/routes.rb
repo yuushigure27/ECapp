@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  get '/' => 'home#top'
+  root 'home#top'
   
   # 顧客用
   # URL /customers/sign_in ...

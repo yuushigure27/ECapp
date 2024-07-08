@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   devise_for :customers,skip: [:passwords], controllers: {
     registrations: "customer/registrations",
     sessions: 'customer/sessions'
+  
   }
   
   # 顧客用

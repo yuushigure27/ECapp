@@ -14,10 +14,9 @@ Rails.application.routes.draw do
     registrations: "shop/registrations",
     sessions: 'shop/sessions'
   }
-  
-  # 商品管理用
-  resources :products
-  
+  namespace :shop do
+    resources :items, only: [:index,:new,:create,:show,:edit,:update]
+  end
   
   
   # 管理者用

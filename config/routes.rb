@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  root 'home#top'
   
   # 顧客用
   # URL /customers/sign_in ...
@@ -15,6 +14,7 @@ Rails.application.routes.draw do
     sessions: 'shop/sessions'
   }
   namespace :shop do
+    get 'top' => 'homes#top', as: 'top'
     resources :items, only: [:index,:new,:create,:show,:edit,:update]
   end
   

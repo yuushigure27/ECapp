@@ -1,15 +1,15 @@
 class Shop::ItemsController < ApplicationController
   
   def index
-    @items = item.all
+    @items = Item.all
   end
 
   def new
-    @item = item.new
+    @item = Item.new
   end
 
   def create
-    @item = item.new(item_params)
+    @item = Item.new(item_params)
     if @item.save
       redirect_to @item, notice: '商品が正常に登録されました。'
     else
@@ -18,7 +18,7 @@ class Shop::ItemsController < ApplicationController
   end
 
   def show
-    @item = item.find(params[:id])
+    @item = Item.find(params[:id])
   end
   
   private

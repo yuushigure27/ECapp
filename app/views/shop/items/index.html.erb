@@ -1,0 +1,11 @@
+<h1>商品一覧</h1>
+
+<%= link_to '商品登録', new_shop_item_path %>
+
+<ul>
+  <% @items.each do |item| %>
+    <li>
+      <%= link_to item.name, item %>
+    </li>
+  <% end %>
+</ul>

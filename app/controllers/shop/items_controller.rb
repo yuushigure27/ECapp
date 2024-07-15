@@ -24,7 +24,7 @@ class Shop::ItemsController < ApplicationController
   private
 
   def item_params
-    items.require(:item).permit(:name, :description, :price, :category, :image, :stock)
+    params.require(:item).permit(:name, :description, :price, :category, :image, :stock)
   end
   
 end

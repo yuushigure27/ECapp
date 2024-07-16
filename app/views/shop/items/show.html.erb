@@ -6,5 +6,5 @@
 <p><strong>在庫数:</strong> <%= @item.stock %></p>
 <p><strong>画像:</strong> <%= image_tag @item.image if @item.image.present? %></p>
 
-<%= link_to '編集', edit_item_path(@item) %> |
-<%= link_to '戻る', items_path %>
+<%= link_to '編集', edit_shop_item_path(@item) %> |
+<%= link_to '戻る', shop_items_path %>

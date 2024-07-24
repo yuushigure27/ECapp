@@ -14,33 +14,33 @@
   <% end %>
 
   <div>
-    <%= form.label :name %><br>
+    <%= form.label :商品名 %><br>
     <%= form.text_field :name %>
   </div>
 
   <div>
-    <%= form.label :description %><br>
+    <%= form.label :商品説明 %><br>
     <%= form.text_area :description %>
   </div>
 
   <div>
-    <%= form.label :price %><br>
-    <%= form.number_field :price, step: 0.01 %>
+    <%= form.label :価格 %><br>
+    <%= form.number_field :price, min: 0 %>
   </div>
 
   <div>
-    <%= form.label :category %><br>
+    <%= form.label :カテゴリー %><br>
     <%= form.text_field :category %>
   </div>
 
   <div>
-    <%= form.label :image %><br>
+    <%= form.label :商品画像 %><br>
     <%= form.file_field :image %>
   </div>
 
   <div>
-    <%= form.label :stock %><br>
-    <%= form.number_field :stock %>
+    <%= form.label :在庫数 %><br>
+    <%= form.number_field :stock, min: 0 %>
   </div>
 
   <div>

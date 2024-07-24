@@ -25,7 +25,7 @@
 
   <div>
     <%= form.label :価格 %><br>
-    <%= form.number_field :price, step: 0.01 %>
+    <%= form.number_field :price, min: 0 %>
   </div>
 
   <div>
@@ -40,7 +40,7 @@
 
   <div>
     <%= form.label :在庫数 %><br>
-    <%= form.number_field :stock %>
+    <%= form.number_field :stock, min: 0 %>
   </div>
 
   <div>
